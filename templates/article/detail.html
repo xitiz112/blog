@@ -1,0 +1,62 @@
+{% extends "article/base.html" %}
+
+ {% block header %}
+ {% include "partials/header.html" %}
+ {% endblock header %}
+
+{% block content %}
+
+
+<div class="col-md-9 content">
+        <div class="post-list">
+       
+             <div class="post">
+               
+               <div class="alert alert-dark" role="alert">
+                 
+                  <img class="rounded-circle"   src="{{object.author.profile.image.url}}" width="50px">
+                 
+                
+                 <h1> <a class="article-title" >{{object.title}}</a></h1>
+                
+                 <p> <a class="article-author" >{{object.author}}</a></p>
+                 
+                  <p> <a class="article-date" >{{object.created_at}}</a></p>
+
+                 {% if object.author == user %}
+                 
+                
+                  <div><a class="btn btn-secondary"   href="{% url 'update'  object.id%}">update</a>
+                    <a class="btn btn-danger" href="{% url 'delete' object.id %}">delete</a>
+                  </div>
+
+                 {% endif %}
+
+
+               </div>
+               
+        <div class="alert alert-light" role="alert">
+          {{object.content}}
+          
+          
+        
+        </div>   
+        
+             
+        
+        
+        
+        
+        </div>
+           
+          </div>
+          
+ </div>
+
+{% endblock content %}
+   
+
+{% block rightbar %}
+{% include "partials/rightbar.html" %}
+{% endblock rightbar %}
+   

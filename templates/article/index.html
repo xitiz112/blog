@@ -1,0 +1,50 @@
+{% extends "article/base.html" %}
+
+{% block header %}
+{% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+
+ 
+<div class="col-md-9 content">
+        <div class="post-list">
+            {% for article in articles  %}
+             <div class="post">
+               
+               <div class="alert alert-dark" role="alert">
+                 
+                  <img class="rounded-circle"   src="{{article.author.profile.image.url}}" width="50px">
+                 
+                
+                 <h1> <a class="article-title" href="{% url 'detail' pk=article.pk %}"  >{{article.title}}</a></h1>
+                 <p>By {{article.author}} at {{article.created_at}}</p>
+                
+               </div>
+        <div class="alert alert-light" role="alert">
+          {{article.content}}
+          
+          
+        
+        </div>   
+        
+             
+             
+        
+        
+        
+        </div>
+            {% endfor %}
+          </div>
+ </div>
+{% endblock content %}
+
+{% block rightbar %}
+{% include "partials/rightbar.html" %}
+{% endblock rightbar %}
+   
+   {% block footer %}
+   {% include "partials/footer.html" %}
+   {% endblock footer %}
+
+

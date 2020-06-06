@@ -1,0 +1,22 @@
+ 
+html{
+    scroll-behavior: smooth;}
+    
+     body{font-family:lato;}
+    
+    .home{height: 100vh;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/mainbg.jpg);background-size: cover;}
+    .navbar-default{background: transparent;padding: 25px 70px;transition: 0.5s}
+    .navbar-default .navbar-nav>li>a{color: #fff;}
+    .bg2 {color:#fff;padding: 190px;}
+    .bg2 h1{font-size: 55px;font-weight: bold; text-transform:capitalize;padding: 10px 0px;}
+    .bg2 h1 span{color: #ff9f1c;}
+    .bg2 p{font-size: 18px;}
+    .bg2 .btn-danger{background: #ff9f1c;margin: 20px;padding: 10px 20px 10px 20px;font-size: 22px; text-transform:capitalize;border-radius: 25px;}
+    .about{background: black;padding: 35px 0px;color: #fff;}
+    .about p{padding: 30px;font-size: 20px;}
+    .about.btn-danger{background-color: #5A564F;text-transform: capitalize;border-radius: 20px;font-size: 18px;font-weight: bold;padding: 10px 20px;}
+    .signatures h2 {padding: 50px;font-weight: bold;color: #000;}
+    .signatures img{float: left;padding-left: 200px;}
+    .tour{height: 100vh;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/mainbg.jpg);background-size: cover;}
+    .tour h2{color: #fff;text-align: center;text-transform: capitalize;padding-top: 40px;font-weight: bold;}
+    .black{background: rgba(0,0,0,0.9);}

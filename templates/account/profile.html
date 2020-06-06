@@ -1,0 +1,34 @@
+{% extends "article/base.html" %}
+{% load crispy_forms_tags %}
+ {% block header %}
+ {% include "partials/header.html" %}
+ {% endblock header %}
+
+{% block content %}
+<div class="alert alert-secondary mt-3 col-md-6" >
+
+    <div class="media pt-2">
+    <img src="{{user.profile.image.url}}" width="50px" class="rounded-circle">
+    
+    <div class="media-body ml-2">
+        <h2 class="account-heading">{{user.username}}</h2>
+        <p class="text-secondary">{{user.email}}</p>
+    </div>
+</div>
+</div>
+
+
+ <form action="" method="post" enctype="multipath/form-data">
+            {% csrf_token %}
+            <input type="hidden" name="next" value={{next}}>
+            {{ u_form|crispy }}
+            {{ p_form|crispy }}
+            <button type="submit" class="btn btn-info">update</button>
+     
+        </form>
+
+
+
+{% endblock content %}
+
+

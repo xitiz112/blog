@@ -1,0 +1,10 @@
+{% extends "article/base.html" %}
+ {% block header %}
+ {% include "partials/header.html" %}
+ {% endblock header %}
+
+{% block content %}
+<h4>you are succesfully logged out</h4>
+<a href="{% url 'login' %}">login again</a>
+
+{% endblock content %}

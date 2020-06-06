@@ -1,0 +1,21 @@
+{% extends "article/base.html" %}
+{% load crispy_forms_tags %}
+ {% block header %}
+ {% include "partials/header.html" %}
+ {% endblock header %}
+
+{% block content %}
+
+<div class="col-md-9 content">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="next" value={{next}}>
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-info">update</button>
+     
+        </form>
+
+     </div>
+
+{% endblock content %}
+   

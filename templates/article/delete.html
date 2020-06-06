@@ -1,0 +1,21 @@
+{% extends "article/base.html" %}
+
+ {% block header %}
+ {% include "partials/header.html" %}
+ {% endblock header %}
+
+{% block content %}
+
+<div class="col-md-9 content">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="next" value={{next}}>
+          <h1>Are you sure you want to delete the post {{object.title}}?</h1>
+            <button type="submit" class="btn btn-danger">Yes</button>
+            <button type="submit" class="btn btn-secondary">cancel</button>
+        </form>
+
+     </div>
+
+{% endblock content %}
+   
